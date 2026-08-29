@@ -1,4 +1,75 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Создатель технологии — ТРИАДА</title><link rel="stylesheet" href="assets/css/styles.css"><script defer src="assets/js/config.js"></script><script defer src="assets/js/api.js"></script><script defer src="assets/js/common.js"></script></head><body>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Создатель технологии — ТРИАДА</title><style>
+:root{
+  --bg:#f7f6f2;--ink:#181a1c;--muted:#62666a;--red:#d62127;--blue:#27465a;--line:#d9d9d4;--white:#fff;
+  --max:1320px;--radius:18px;--shadow:0 12px 36px rgba(24,26,28,.06)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button,input,textarea,select{font:inherit}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}.site-header{position:sticky;top:0;z-index:50;background:rgba(247,246,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{height:74px;display:flex;align-items:center;gap:28px}.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--red)}.nav{margin-left:auto;display:flex;gap:22px;align-items:center;font-size:14px}.nav a:hover{color:var(--red)}.nav-toggle{display:none;margin-left:auto;background:none;border:0;font-size:24px}
+.hero{padding:96px 0 76px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:800}.hero h1,.page-hero h1{font-size:clamp(48px,7vw,92px);line-height:.96;letter-spacing:-.055em;margin:16px 0 24px;max-width:900px}.hero p,.page-hero p{font-size:20px;color:var(--muted);max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;background:var(--red);color:white;font-weight:700;border:1px solid var(--red)}.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.button.dark{background:var(--ink);border-color:var(--ink)}.text-link{font-weight:700;border-bottom:1px solid var(--ink)}
+.triad-diagram{min-height:420px;position:relative;border:1px solid var(--line);border-radius:32px;background:linear-gradient(150deg,#fff,#f1f0eb);overflow:hidden;box-shadow:var(--shadow)}.triad-diagram:before,.triad-diagram:after{content:"";position:absolute;border:1px solid #cfd2d4;border-radius:50%;width:340px;height:340px;left:50%;top:50%;transform:translate(-50%,-50%)}.triad-diagram:after{width:220px;height:220px}.node{position:absolute;padding:12px 16px;border-radius:999px;background:white;border:1px solid var(--line);font-weight:800;box-shadow:var(--shadow)}.n1{top:18%;left:12%}.n2{top:56%;left:41%}.n3{bottom:14%;right:9%}.pulse{position:absolute;width:12px;height:12px;background:var(--red);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 14px rgba(214,33,39,.08)}
+section{padding:78px 0}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:30px}.section-head h2{font-size:clamp(34px,5vw,60px);line-height:1.02;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);font-size:18px;margin:0}.grid{display:grid;gap:18px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;min-height:210px;display:flex;flex-direction:column;box-shadow:0 6px 22px rgba(24,26,28,.025)}.card h3{font-size:24px;line-height:1.15;margin:10px 0}.card p{color:var(--muted);margin:0 0 18px}.card .button,.card .text-link{margin-top:auto;align-self:flex-start}.card-actions{margin-top:auto;display:flex;flex-direction:column;gap:12px;align-items:flex-start}.meta{color:var(--blue);font-size:13px;margin:0 0 16px}.portrait{aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin-bottom:18px;background:#eee}
+.problem-grid .card{min-height:170px}.problem-grid h3{font-size:22px}.dark-section{background:var(--ink);color:white}.dark-section .section-head p,.dark-section .card p{color:#c8cbce}.dark-section .card{background:#202326;border-color:#35383b}.dark-section .eyebrow{color:#a6becd}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.step{background:var(--white);padding:22px}.step b{font-size:28px;color:var(--red)}.step h3{font-size:17px;margin:24px 0 7px}.step p{font-size:13px;color:var(--muted);margin:0}
+.page-hero{padding:72px 0 44px}.page-hero h1{font-size:clamp(44px,7vw,82px)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 28px}.filter{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 13px}.search{width:100%;padding:16px;border:1px solid var(--line);border-radius:14px;background:white;font-size:18px}.empty{padding:34px;border:1px dashed var(--line);border-radius:var(--radius);color:var(--muted);background:#fff}
+.detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:44px}.detail-content h2{font-size:34px;letter-spacing:-.03em;margin:48px 0 12px}.detail-sidebar{position:sticky;top:100px;height:max-content}.fact{padding:14px 0;border-bottom:1px solid var(--line)}.fact span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.fact b{display:block;margin-top:5px}.evidence-scale{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:18px}.evidence-scale span{height:8px;border-radius:99px;background:#ddd}.evidence-scale span.on{background:var(--red)}
+.form-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-grid .full{grid-column:1/-1}label{font-weight:700;font-size:13px}input,textarea,select{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:6px}textarea{min-height:120px;resize:vertical}.form-status{margin-top:12px;color:var(--blue)}.hp{position:absolute;left:-9999px}
+.footer{padding:48px 0;border-top:1px solid var(--line);margin-top:60px}.footer-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:30px}.footer h4{margin:0 0 12px}.footer a{display:block;color:var(--muted);margin:7px 0}.legal{font-size:12px;color:var(--muted);margin-top:30px;max-width:900px}
+@media(max-width:980px){.nav{display:none;position:absolute;left:20px;right:20px;top:74px;background:white;border:1px solid var(--line);border-radius:14px;padding:16px;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.nav-toggle{display:block}.hero-grid,.section-head,.detail-grid{grid-template-columns:1fr}.triad-diagram{min-height:320px}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(2,1fr)}.detail-sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}.hero{padding-top:60px}}
+@media(max-width:620px){.container{width:min(calc(100% - 28px),var(--max))}.hero h1,.page-hero h1{font-size:48px}.hero p,.page-hero p{font-size:17px}.grid-4,.grid-3,.grid-2,.form-grid,.footer-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.evidence-scale{grid-template-columns:repeat(7,1fr)}section{padding:56px 0}.section-head{gap:18px}.card{min-height:unset}}
+
+</style><script>
+// После публикации Google Apps Script Web App вставьте URL /exec сюда.
+window.TRIADA_CONFIG = {
+  API_URL: 'https://script.google.com/macros/s/AKfycbx8Can62cXNw6nDtf886QBsCSZgSdFpAb1yBS1tljeRZTxrNdUVg59lQ1ZYYLkka4c6/exec',
+  SITE_NAME: 'Фонд ТРИАДА',
+  CONTACT_EMAIL: 'fond-triada@yandex.com'
+};
+
+</script><script>
+(function(){
+  const cfg = () => window.TRIADA_CONFIG || {};
+  const demo = {
+    ok:true, generatedAt:new Date().toISOString(),
+    projects:[], creators:[], challenges:[], competences:[], publications:[]
+  };
+  function configured(){ const u=cfg().API_URL||''; return /^https:\/\//.test(u) && !u.includes('PASTE_'); }
+  async function get(action, params={}){
+    if(!configured()) return action==='bootstrap'?demo:{ok:false,error:'API не подключён'};
+    const u=new URL(cfg().API_URL);
+    u.searchParams.set('action',action);
+    Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));
+    const r=await fetch(u.toString(),{redirect:'follow',cache:'no-store'});
+    if(!r.ok) throw new Error('Ошибка API: '+r.status);
+    return r.json();
+  }
+  async function submit(payload){
+    if(!configured()) throw new Error('Сначала подключите Apps Script API в assets/js/config.js');
+    const r=await fetch(cfg().API_URL,{method:'POST',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+    if(!r.ok) throw new Error('Не удалось отправить форму');
+    return r.json();
+  }
+  window.TriadaAPI={get,submit,configured};
+})();
+
+</script><script>
+(function(){
+  const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const qs=k=>new URLSearchParams(location.search).get(k)||'';
+  const list=v=>Array.isArray(v)?v:(v?String(v).split(/[,;]+/).map(x=>x.trim()).filter(Boolean):[]);
+  function stageLabel(s){return ({IDEA:'Идея',CONCEPT:'Концепция',LAB:'Лаборатория',PROTOTYPE:'Прототип',PILOT:'Пилот',DEMO:'Демонстрация',INDUSTRIAL:'Промышленная эксплуатация','SCALE-UP':'Масштабирование'})[s]||s||''}
+  function projectCard(p){return `<article class="card project-card"><div class="eyebrow">${esc(p.direction||'Технологический проект')} · ${esc(stageLabel(p.stage))}</div><h3>${esc(p.name)}</h3><p>${esc(p.lead||p.problem||'')}</p><div class="meta"><span>${esc(p.need||'')}</span></div><div class="card-actions"><a class="button" href="project.html?id=${encodeURIComponent(p.id)}">Познакомиться с проектом</a><a class="text-link" href="cooperation.html?project=${encodeURIComponent(p.id)}">Обсудить с ТРИАДОЙ →</a></div></article>`}
+  function creatorCard(c){return `<article class="card creator-card">${c.photo?`<img class="portrait" src="${esc(c.photo)}" alt="${esc(c.name)}">`:''}<div class="eyebrow">${esc((c.roles||[]).join(' · '))}</div><h3>${esc(c.name)}</h3><p>${esc(c.degree||c.title||c.tasks||'')}</p><a class="button secondary" href="creator.html?id=${encodeURIComponent(c.id)}">Познакомиться с создателем</a></article>`}
+  function publicationCard(p){return `<article class="card"><div class="eyebrow">${esc(p.type||'Публикация')}</div><h3>${esc(p.title)}</h3><p>${esc(p.lead||'')}</p><a class="text-link" href="publications.html?id=${encodeURIComponent(p.id)}">Читать →</a></article>`}
+  function bindMobileNav(){const b=document.querySelector('[data-nav-toggle]'), n=document.querySelector('[data-nav]');if(b&&n)b.onclick=()=>n.classList.toggle('open')}
+  async function submitForm(form){const status=form.querySelector('[data-form-status]'); const data=Object.fromEntries(new FormData(form).entries()); try{status.textContent='Отправляем…';const r=await TriadaAPI.submit(data);if(!r.ok)throw new Error(r.error||'Ошибка');status.textContent='Спасибо. Заявка принята: '+r.id;form.reset()}catch(e){status.textContent=e.message}}
+  window.TriadaUI={esc,qs,list,stageLabel,projectCard,creatorCard,publicationCard,bindMobileNav,submitForm};
+  document.addEventListener('DOMContentLoaded',bindMobileNav);
+})();
+
+</script></head><body>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">ТРИАДА<span>▲</span></a><nav class="nav" data-nav><a href="projects.html">Технологии и проекты</a><a href="creators.html">Создатели технологий</a><a href="cooperation.html">Сотрудничество</a></nav><button class="nav-toggle" data-nav-toggle>☰</button></div></header><main id="content"><section class="page-hero"><div class="container"><div class="empty">Загрузка...</div></div></section></main><footer class="footer"><div class="container"><div class="brand">ТРИАДА<span>▲</span></div></div></footer>
 <script>window.addEventListener('DOMContentLoaded',async()=>{const id=TriadaUI.qs('id'),root=document.querySelector('#content');try{const [r,b]=await Promise.all([TriadaAPI.get('creator',{id}),TriadaAPI.get('bootstrap')]);if(!r.ok)throw new Error(r.error||'Профиль не найден');const c=r.creator;const projects=(b.projects||[]).filter(p=>(c.projectIds||[]).includes(p.id));document.title=c.name+' — ТРИАДА';root.innerHTML=`<section class="page-hero"><div class="container"><div class="eyebrow">${TriadaUI.esc((c.roles||[]).join(' · '))}</div><h1>${TriadaUI.esc(c.name)}</h1><p>${TriadaUI.esc([c.degree,c.title].filter(Boolean).join(' · '))}</p></div></section><section><div class="container detail-grid"><article class="detail-content">${c.photo?`<img class="portrait" style="max-width:520px" src="${TriadaUI.esc(c.photo)}" alt="${TriadaUI.esc(c.name)}">`:''}<h2>О специалисте</h2><p>${TriadaUI.esc(c.bio||'Публичная биография готовится.')}</p>${c.quote?`<h2>Авторская цитата</h2><p>«${TriadaUI.esc(c.quote)}»</p>`:''}<h2>Какие задачи может помогать решать</h2><p>${TriadaUI.esc(c.tasks||'Информация уточняется.')}</p><h2>Разработки и проекты</h2><div class="grid grid-2">${projects.length?projects.map(TriadaUI.projectCard).join(''):'<div class="empty">Связанные публичные проекты пока не опубликованы.</div>'}</div>${c.patents?`<h2>Патенты и интеллектуальная собственность</h2><p>${TriadaUI.esc(c.patents)}</p>`:''}</article><aside class="detail-sidebar card"><div class="fact"><span>Роль</span><b>${TriadaUI.esc((c.roles||[]).join(' · '))}</b></div><div class="fact"><span>Компетенции</span><b>${TriadaUI.esc((c.competences||[]).join(' · '))}</b></div><a class="button" href="cooperation.html?form=creator&creator=${encodeURIComponent(c.id)}">Связаться через ТРИАДУ</a></aside></div></section>`}catch(e){root.innerHTML=`<section class="page-hero"><div class="container"><div class="empty">${TriadaUI.esc(e.message)}</div></div></section>`}});</script>
 </body></html>
